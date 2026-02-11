@@ -1,0 +1,85 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #ffb6c1, #ff8fab);
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+  text-align: center;
+  color: white;
+}
+
+.container {
+  position: relative;
+  top: 20vh;
+  z-index: 2;
+}
+
+h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+h2 {
+  font-size: 30px;
+  color: yellow;
+  margin-bottom: 20px;
+  animation: fadeIn 3s ease-in-out;
+}
+
+p {
+  margin-top: 20px;
+  font-size: 18px;
+  animation: fadeIn 4s ease-in-out;
+}
+
+/* Cake */
+.cake {
+  margin: 20px auto;
+  width: 150px;
+  height: 100px;
+  background: #5c3a21;
+  border-radius: 10px;
+  position: relative;
+}
+
+.candle {
+  width: 10px;
+  height: 30px;
+  background: white;
+  position: absolute;
+  top: -30px;
+  border-radius: 3px;
+}
+
+.candle:nth-child(1) { left: 40px; }
+.candle:nth-child(2) { left: 75px; }
+.candle:nth-child(3) { left: 110px; }
+
+.flame {
+  width: 12px;
+  height: 18px;
+  background: radial-gradient(circle, #ffec85 0%, #ff9800 60%, transparent 80%);
+  position: absolute;
+  top: -18px;
+  left: -1px;
+  border-radius: 50%;
+  animation: flicker 0.2s infinite alternate;
+  box-shadow: 0 0 10px #ff9800, 0 0 20px #ff5722;
+}
+
+@keyframes flicker {
+  0% {
+    transform: scale(1) rotate(-2deg);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(1.2) rotate(2deg);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
